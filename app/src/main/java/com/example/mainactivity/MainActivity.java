@@ -623,8 +623,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public String getResult() {
-        String result = text.getText().toString();
-        out.print(result);
+        String infix = text.getText().toString();
+        StringBuffer postfix = toPostfix(infix);
+        Double result = toValue(postfix);
         String re = String.format("%.7f", result);//规避极小误差
         re = re.replaceAll("0+?$", "");//去掉多余的0
         re = re.replaceAll("[.]$", "");//如最后一位是.则去掉
