@@ -1,4 +1,4 @@
-# AndroidStudio_Calculator
+AndroidStudio_Calculator
 =============================
 安卓计算器
 -----------------------------
